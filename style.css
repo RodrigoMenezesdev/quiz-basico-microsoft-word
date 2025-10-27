@@ -1,0 +1,306 @@
+/* --- Variáveis de Tema (Para fácil personalização) --- */
+:root {
+    --primary-color: #0056b3; /* Azul Escuro Elegante (Usado no título e nos botões de opção) */
+    --secondary-color: #6c757d; /* Cinza Suave (Usado no botão Voltar) */
+    --success-color: #28a745; /* Verde Vívido para Acerto (Usado no botão Próximo) */
+    --danger-color: #dc3545; /* Vermelho Forte para Erro (Usado no botão Sair) */
+    --highlight-bg: #e9f5ff; /* Fundo Claro para Explicações */
+    --quiz-bg: #ffffff;
+    --page-bg: #f4f6f9; /* Fundo geral da página */
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    /* Cores ajustadas para o estilo "Pill" (cápsula) dos botões de opção */
+    --option-default-bg: var(--primary-color);
+    --option-default-text: white; 
+}
+
+/* --- Estilos Globais e Reset --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--page-bg);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    background-color: var(--quiz-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    max-width: 800px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* --- Títulos --- */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#quiz-subtitle {
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* --- Blocos de Pergunta --- */
+
+.question-block {
+    margin-bottom: 30px;
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.question-text {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botões de Opção (Estilo CÁPSULA AZUL) */
+.answer-options button {
+    width: 100%;
+    text-align: left;
+    padding: 14px 20px;
+    
+    border: none; 
+    border-radius: 999px; /* Efeito cápsula */
+    background-color: var(--option-default-bg); /* Fundo Azul Sólido */
+    color: var(--option-default-text); /* Texto Branco */
+    
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answer-options button:hover:not([disabled]) {
+    background-color: #004085; /* Azul Escuro no hover */
+}
+
+/* Botão desabilitado */
+.answer-options button:disabled {
+    cursor: default;
+    opacity: 1; 
+}
+
+/* --- Feedback Visual --- */
+
+/* Opção Correta (Verde) */
+.answer-options button.correct {
+    background-color: var(--success-color);
+    color: white;
+    border: none; 
+    font-weight: 600;
+}
+
+/* Opção Incorreta (Vermelho) */
+.answer-options button.incorrect {
+    background-color: var(--danger-color);
+    color: white;
+    border: none; 
+}
+
+/* Feedback de Texto (ícone ao lado) */
+.feedback-correct, .feedback-incorrect {
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+.feedback-correct {
+    color: var(--success-color);
+}
+
+.feedback-incorrect {
+    color: var(--danger-color);
+}
+
+/* Explicação/Rationale */
+.rationale-text {
+    margin-top: 15px;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--highlight-bg);
+    font-style: italic;
+    color: #004085;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* --- Área de Navegação (Voltar e Próximo Lado a Lado) --- */
+
+.navigation-area {
+    /* CHAVE: Alinha os botões lado a lado com espaço entre eles */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    gap: 15px; 
+}
+
+/* Estilo Base para todos os botões de navegação */
+.nav-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    min-width: 120px; /* Garante tamanho mínimo para consistência */
+    text-align: center;
+}
+
+/* Estilos específicos dos botões */
+.back-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+.next-button {
+    background-color: var(--success-color);
+    color: white;
+}
+.next-button:hover:not([disabled]) {
+    background-color: #218838;
+}
+
+.finish-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+.finish-button:hover:not([disabled]) {
+    background-color: #004085;
+}
+
+.nav-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* --- Área de Resultados (Bloco e Final) --- */
+.results-area {
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #fff3cd; 
+    border: 1px solid #ffeeba;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+}
+
+.results-area h3 {
+    color: #856404;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.score-summary {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+.motivation-message {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.validation-message {
+    background-color: #f8d7da; 
+    color: var(--danger-color);
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Estilos Finais (Pós-Quiz) */
+.final-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Cor do botão SAIR (vermelho) */
+.exit-button {
+    background-color: var(--danger-color);
+    color: white;
+}
+.exit-button:hover {
+    background-color: #a71d2a;
+}
+
+.exit-screen {
+    text-align: center;
+    padding: 50px 0;
+}
+.try-again {
+    background-color: var(--success-color);
+}
+
+/* Responsividade (Para telas menores) */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .question-text {
+        font-size: 1.1em;
+    }
+
+    .answer-options button {
+        padding: 12px 15px;
+        font-size: 0.95em;
+    }
+
+    .navigation-area {
+        flex-direction: row; /* Mantém lado a lado, mas reduz o espaço */
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .nav-button {
+        min-width: unset; 
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}

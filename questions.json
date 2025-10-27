@@ -1,0 +1,552 @@
+[
+  {
+    "id": 1,
+    "question": "Qual é a principal função da guia 'Arquivo' (File) no Microsoft Word?",
+    "options": [
+      { "text": "Formatar a aparência do texto.", "isCorrect": false, "rationale": "A formatação de texto é realizada na guia 'Página Inicial'." },
+      { "text": "Gerenciar o documento (Salvar, Abrir, Imprimir, Configurações de Conta).", "isCorrect": true, "rationale": "A guia 'Arquivo' abre a exibição Backstage, que lida com o gerenciamento e as operações do documento em si." },
+      { "text": "Inserir tabelas e imagens.", "isCorrect": false, "rationale": "A inserção de objetos é feita na guia 'Inserir'." },
+      { "text": "Realizar a revisão ortográfica e gramatical.", "isCorrect": false, "rationale": "A revisão é feita na guia 'Revisão'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A principal função é o gerenciamento do documento." }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Qual atalho de teclado é universalmente usado no Word para salvar o documento ativo?",
+    "options": [
+      { "text": "Ctrl + A", "isCorrect": false, "rationale": "Ctrl + A é usado para selecionar todo o conteúdo do documento." },
+      { "text": "Ctrl + S", "isCorrect": true, "rationale": "Ctrl + S é o atalho padrão para salvar o documento, garantindo que as alterações sejam registradas." },
+      { "text": "Ctrl + P", "isCorrect": false, "rationale": "Ctrl + P abre a caixa de diálogo de impressão." },
+      { "text": "Ctrl + N", "isCorrect": false, "rationale": "Ctrl + N cria um novo documento em branco." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + S." }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "O que a guia 'Página Inicial' (Home) contém em sua maioria?",
+    "options": [
+      { "text": "Opções para adicionar sumário e notas de rodapé.", "isCorrect": false, "rationale": "Essas opções estão na guia 'Referências'." },
+      { "text": "As ferramentas mais comuns de formatação de texto e parágrafo (Fonte, Parágrafo, Estilos).", "isCorrect": true, "rationale": "A guia 'Página Inicial' é o hub central para tarefas diárias de edição, como negrito, itálico, alinhamento e estilos de fonte." },
+      { "text": "Opções de layout do documento, como margens e orientação.", "isCorrect": false, "rationale": "Essas opções estão na guia 'Layout'." },
+      { "text": "Ferramentas para mesclagem de correspondência.", "isCorrect": false, "rationale": "A mesclagem está na guia 'Correspondências'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A guia 'Página Inicial' foca na formatação básica de texto." }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Em qual guia você encontraria as opções para adicionar Imagens, Tabelas, Formas e Hiperlinks ao seu documento?",
+    "options": [
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para margens e quebras de página." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para ortografia e comentários." },
+      { "text": "Guia 'Inserir'.", "isCorrect": true, "rationale": "A guia 'Inserir' é o local onde se adicionam todos os objetos externos e elementos visuais ao documento." },
+      { "text": "Guia 'Exibir'.", "isCorrect": false, "rationale": "A guia 'Exibir' altera o modo de visualização do documento." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O local correto é a guia 'Inserir'." }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "O que são os 'Templates' (Modelos) no Microsoft Word?",
+    "options": [
+      { "text": "Arquivos de texto simples sem formatação.", "isCorrect": false, "rationale": "Esses seriam arquivos .txt." },
+      { "text": "Documentos pré-formatados que servem como ponto de partida para criar novos arquivos (Ex: Currículos, Cartas).", "isCorrect": true, "rationale": "Templates fornecem uma estrutura e design prontos, economizando tempo ao criar documentos padronizados." },
+      { "text": "Apenas o esquema de cores aplicado ao documento.", "isCorrect": false, "rationale": "O esquema de cores é parte da formatação, mas não define um template." },
+      { "text": "Uma ferramenta para criar gráficos.", "isCorrect": false, "rationale": "Gráficos são inseridos separadamente." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Templates são documentos pré-formatados." }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Qual é o atalho de teclado usado para desfazer (Undo) a última ação no Word?",
+    "options": [
+      { "text": "Ctrl + F", "isCorrect": false, "rationale": "Ctrl + F é para localizar texto." },
+      { "text": "Ctrl + D", "isCorrect": false, "rationale": "Ctrl + D geralmente abre a caixa de diálogo Fonte." },
+      { "text": "Ctrl + Z", "isCorrect": true, "rationale": "Ctrl + Z é o atalho padrão para desfazer a última modificação ou comando no documento." },
+      { "text": "Ctrl + Y", "isCorrect": false, "rationale": "Ctrl + Y é o atalho para refazer (Redo)." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + Z." }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Para que serve a ferramenta 'Pincel de Formatação' (Format Painter)?",
+    "options": [
+      { "text": "Pintar o fundo da página com uma cor sólida.", "isCorrect": false, "rationale": "O fundo da página é alterado na guia 'Design'." },
+      { "text": "Aplicar a formatação de um texto selecionado a outro texto, rapidamente.", "isCorrect": true, "rationale": "O Pincel de Formatação copia atributos de formatação (fonte, cor, negrito, etc.) e os aplica a outro bloco de texto com um clique." },
+      { "text": "Traduzir um parágrafo para outro idioma.", "isCorrect": false, "rationale": "A tradução é uma ferramenta separada." },
+      { "text": "Corrigir erros gramaticais automaticamente.", "isCorrect": false, "rationale": "Isso é feito pela Revisão Ortográfica e Gramatical." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O Pincel copia e aplica a formatação de um texto a outro." }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Em qual grupo da guia 'Página Inicial' (Home) você pode alterar o tamanho e o tipo da fonte?",
+    "options": [
+      { "text": "Grupo 'Parágrafo'.", "isCorrect": false, "rationale": "O grupo 'Parágrafo' lida com alinhamento e recuos." },
+      { "text": "Grupo 'Estilos'.", "isCorrect": false, "rationale": "O grupo 'Estilos' aplica formatações predefinidas em bloco." },
+      { "text": "Grupo 'Fonte'.", "isCorrect": true, "rationale": "O grupo 'Fonte' contém todas as opções relacionadas à tipografia, como tipo de fonte, tamanho, cor e sublinhado." },
+      { "text": "Grupo 'Edição'.", "isCorrect": false, "rationale": "O grupo 'Edição' contém Localizar e Substituir." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O tamanho e o tipo da fonte são alterados no grupo 'Fonte'." }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "O que o recurso 'Recuo' (Indent) de parágrafo no Word define?",
+    "options": [
+      { "text": "O tamanho da fonte do texto.", "isCorrect": false, "rationale": "O tamanho da fonte é alterado no grupo 'Fonte'." },
+      { "text": "O espaçamento entre as linhas do texto.", "isCorrect": false, "rationale": "O espaçamento entre linhas é alterado no grupo 'Parágrafo'." },
+      { "text": "A distância do parágrafo em relação às margens esquerda e direita da página.", "isCorrect": true, "rationale": "O recuo permite afastar ou aproximar o parágrafo das margens laterais do documento." },
+      { "text": "A posição do cabeçalho e rodapé.", "isCorrect": false, "rationale": "A posição de cabeçalhos/rodapés é ajustada separadamente." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O Recuo define a distância do parágrafo em relação às margens." }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Em termos de layout de página, o que o termo 'Margens do Documento' define?",
+    "options": [
+      { "text": "O espaço entre palavras e letras.", "isCorrect": false, "rationale": "Esse é o espaçamento de caracteres." },
+      { "text": "As bordas que circundam o texto, restringindo a área de escrita.", "isCorrect": true, "rationale": "As margens são os espaços em branco (superior, inferior, esquerda e direita) que delimitam a área de impressão do texto." },
+      { "text": "O tamanho da fonte padrão do documento.", "isCorrect": false, "rationale": "O tamanho da fonte é configurado no grupo 'Fonte'." },
+      { "text": "O número de colunas na página.", "isCorrect": false, "rationale": "O número de colunas é uma configuração separada de layout." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "As Margens definem as bordas da área de escrita." }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Qual é a principal função dos 'Cabeçalhos e Rodapés' (Headers and Footers)?",
+    "options": [
+      { "text": "Armazenar texto temporário que não será impresso.", "isCorrect": false, "rationale": "O texto temporário seria melhor colocado em comentários ou notas." },
+      { "text": "Inserir informações repetitivas (Ex: número da página, nome do documento, data) que aparecem em cada página.", "isCorrect": true, "rationale": "Cabeçalhos e rodapés são áreas reservadas para conteúdo que deve se repetir em todo o documento, facilitando a padronização." },
+      { "text": "Ajustar o tamanho da página.", "isCorrect": false, "rationale": "O tamanho da página é ajustado na guia 'Layout'." },
+      { "text": "Controlar o recuo do primeiro parágrafo.", "isCorrect": false, "rationale": "O recuo é controlado no grupo 'Parágrafo'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Cabeçalhos e Rodapés são para informações que se repetem em todas as páginas." }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Em qual guia do Word você pode adicionar uma Tabela ao documento?",
+    "options": [
+      { "text": "Guia 'Referências'.", "isCorrect": false, "rationale": "A guia 'Referências' lida com sumário e citações." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' lida com correções e comentários." },
+      { "text": "Guia 'Inserir'.", "isCorrect": true, "rationale": "O grupo 'Tabelas' dentro da guia 'Inserir' é o local para adicionar e configurar tabelas no documento." },
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para configurações de página." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Tabela é adicionada na guia 'Inserir'." }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Qual atalho de teclado é usado para colar (Paste) um item copiado ou recortado?",
+    "options": [
+      { "text": "Ctrl + C", "isCorrect": false, "rationale": "Ctrl + C é o atalho para copiar." },
+      { "text": "Ctrl + V", "isCorrect": true, "rationale": "Ctrl + V é o atalho padrão para inserir o conteúdo da área de transferência (copiado ou recortado) no ponto de inserção." },
+      { "text": "Ctrl + X", "isCorrect": false, "rationale": "Ctrl + X é o atalho para recortar." },
+      { "text": "Ctrl + Z", "isCorrect": false, "rationale": "Ctrl + Z é o atalho para desfazer." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + V." }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "O que o recurso 'Quebra de Página' (Page Break) faz no Word?",
+    "options": [
+      { "text": "Insere uma linha horizontal.", "isCorrect": false, "rationale": "Uma linha horizontal é inserida como forma ou borda." },
+      { "text": "Garante que o texto seguinte comece no topo da próxima página.", "isCorrect": true, "rationale": "A Quebra de Página força o ponto de inserção a pular para o início da página seguinte, ignorando o espaço restante na página atual." },
+      { "text": "Muda a cor de fundo da página.", "isCorrect": false, "rationale": "A cor de fundo é alterada na guia 'Design'." },
+      { "text": "Cria um novo documento.", "isCorrect": false, "rationale": "Novo documento é Ctrl + N." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Quebra de Página força o início de uma nova página." }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Qual é a extensão de arquivo padrão para documentos criados na maioria das versões recentes do Microsoft Word?",
+    "options": [
+      { "text": ".txt", "isCorrect": false, "rationale": "A extensão .txt é para texto simples, sem formatação." },
+      { "text": ".pdf", "isCorrect": false, "rationale": "A extensão .pdf é para documentos de formato portátil, não editável no Word." },
+      { "text": ".docx", "isCorrect": true, "rationale": "O formato .docx (Document XML) é o padrão desde o Word 2007, sendo um formato aberto e baseado em XML." },
+      { "text": ".xlsx", "isCorrect": false, "rationale": "A extensão .xlsx é o padrão para planilhas do Excel." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A extensão padrão é .docx." }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Em qual guia você define a Orientação da página (Retrato ou Paisagem)?",
+    "options": [
+      { "text": "Guia 'Página Inicial'.", "isCorrect": false, "rationale": "A guia 'Página Inicial' é para formatação de texto." },
+      { "text": "Guia 'Layout'.", "isCorrect": true, "rationale": "O grupo 'Configurar Página' dentro da guia 'Layout' contém opções para Margens, Orientação e Tamanho da página." },
+      { "text": "Guia 'Inserir'.", "isCorrect": false, "rationale": "A guia 'Inserir' é para objetos como imagens e tabelas." },
+      { "text": "Guia 'Referências'.", "isCorrect": false, "rationale": "A guia 'Referências' é para citações e sumário." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Orientação da página é definida na guia 'Layout'." }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Qual é o atalho de teclado para aplicar ou remover o formato Negrito (Bold) ao texto selecionado?",
+    "options": [
+      { "text": "Ctrl + U", "isCorrect": false, "rationale": "Ctrl + U aplica ou remove o sublinhado (Underline)." },
+      { "text": "Ctrl + I", "isCorrect": false, "rationale": "Ctrl + I aplica ou remove o itálico (Italic)." },
+      { "text": "Ctrl + N", "isCorrect": true, "rationale": "Ctrl + N aplica ou remove o Negrito (Bold) no texto, sendo um dos atalhos de formatação mais usados." },
+      { "text": "Ctrl + B", "isCorrect": false, "rationale": "Ctrl + B é o atalho em inglês (Bold), mas no português é Ctrl + N." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto em português é Ctrl + N." }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Para que serve a opção de 'Centralização' de texto no Word?",
+    "options": [
+      { "text": "Alinha o texto à margem esquerda do documento.", "isCorrect": false, "rationale": "Isso é feito com o alinhamento à esquerda." },
+      { "text": "Alinha o texto uniformemente em relação às margens esquerda e direita.", "isCorrect": true, "rationale": "A centralização é usada principalmente para títulos e textos curtos, posicionando-os no meio exato da área de escrita." },
+      { "text": "Alinha o texto à margem direita do documento.", "isCorrect": false, "rationale": "Isso é feito com o alinhamento à direita." },
+      { "text": "Espalha o texto para preencher todo o espaço entre as margens.", "isCorrect": false, "rationale": "Isso é feito com o alinhamento justificado." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Centralização alinha o texto ao centro da área de escrita." }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Onde, por padrão, o Microsoft Word exibe o 'Contador de Palavras' (Word Count)?",
+    "options": [
+      { "text": "No Menu 'Arquivo'.", "isCorrect": false, "rationale": "O Menu 'Arquivo' mostra estatísticas do documento, mas não o contador constante." },
+      { "text": "Na Barra de Status, na parte inferior da tela.", "isCorrect": true, "rationale": "O contador de palavras é exibido de forma contínua e discreta na Barra de Status, permitindo o monitoramento do comprimento do texto." },
+      { "text": "No topo da guia 'Página Inicial'.", "isCorrect": false, "rationale": "O topo da guia 'Página Inicial' tem ferramentas de formatação." },
+      { "text": "Na caixa de diálogo de impressão.", "isCorrect": false, "rationale": "A caixa de impressão lida com configurações de impressão." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O contador de palavras fica na Barra de Status." }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Qual é a ferramenta usada para remover rapidamente toda a formatação manual (negrito, itálico, cor) de um texto selecionado, revertendo-o ao estilo padrão?",
+    "options": [
+      { "text": "Borda da Página.", "isCorrect": false, "rationale": "Borda da Página adiciona uma moldura ao documento." },
+      { "text": "Quebra de Seção.", "isCorrect": false, "rationale": "Quebra de Seção divide o documento em partes para formatação distinta." },
+      { "text": "Limpar Toda a Formatação (Clear All Formatting).", "isCorrect": true, "rationale": "Esta ferramenta no grupo 'Fonte' da guia 'Página Inicial' remove toda a formatação aplicada manualmente, retornando ao estilo base." },
+      { "text": "Modo de Leitura.", "isCorrect": false, "rationale": "Modo de Leitura altera a visualização, não a formatação." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A ferramenta correta é 'Limpar Toda a Formatação'." }
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Em qual grupo da guia 'Página Inicial' você encontra as opções para definir o Espaçamento entre Linhas (Line Spacing)?",
+    "options": [
+      { "text": "Grupo 'Fonte'.", "isCorrect": false, "rationale": "O grupo 'Fonte' lida com tipo, tamanho e cor da letra." },
+      { "text": "Grupo 'Estilos'.", "isCorrect": false, "rationale": "O grupo 'Estilos' aplica formatações predefinidas." },
+      { "text": "Grupo 'Parágrafo'.", "isCorrect": true, "rationale": "O espaçamento entre linhas e entre parágrafos, bem como o alinhamento e recuo, são definidos no grupo 'Parágrafo'." },
+      { "text": "Grupo 'Edição'.", "isCorrect": false, "rationale": "O grupo 'Edição' lida com localizar e substituir." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O espaçamento entre linhas é configurado no grupo 'Parágrafo'." }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "Qual é a principal vantagem de usar 'Estilos' (Styles) como 'Título 1', 'Normal' ou 'Lista' no Word?",
+    "options": [
+      { "text": "Permitir a inserção de imagens e gráficos.", "isCorrect": false, "rationale": "A inserção é feita na guia 'Inserir'." },
+      { "text": "Permitir a criação rápida de um Sumário (Tabela de Conteúdo) e manter a consistência visual do documento.", "isCorrect": true, "rationale": "Estilos são cruciais para a estrutura, pois o Word usa Estilos de Título para gerar o Sumário automaticamente, além de garantir um design coeso." },
+      { "text": "Apenas reduzir o tamanho do arquivo.", "isCorrect": false, "rationale": "Estilos não têm impacto significativo no tamanho do arquivo." },
+      { "text": "Executar macros e comandos avançados.", "isCorrect": false, "rationale": "Macros são ferramentas de automação separadas." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Estilos facilitam a criação de Sumário e mantêm a consistência visual." }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Qual atalho de teclado é usado para abrir um novo documento em branco no Word?",
+    "options": [
+      { "text": "Ctrl + O", "isCorrect": false, "rationale": "Ctrl + O abre um documento existente." },
+      { "text": "Ctrl + W", "isCorrect": false, "rationale": "Ctrl + W fecha o documento ativo." },
+      { "text": "Ctrl + N", "isCorrect": true, "rationale": "Ctrl + N é o atalho padrão para iniciar um novo documento baseado no modelo padrão." },
+      { "text": "Ctrl + T", "isCorrect": false, "rationale": "Ctrl + T alinha o texto ao centro." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + N." }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "O que a ferramenta 'Localizar' (Find), geralmente acessível por Ctrl + F, faz no Word?",
+    "options": [
+      { "text": "Altera a fonte de todo o documento.", "isCorrect": false, "rationale": "A fonte é alterada no grupo 'Fonte'." },
+      { "text": "Substitui automaticamente um termo por outro.", "isCorrect": false, "rationale": "Isso é feito pela ferramenta 'Substituir' (Replace)." },
+      { "text": "Permite buscar por texto, formatação ou objetos específicos no documento, destacando onde eles ocorrem.", "isCorrect": true, "rationale": "Localizar é essencial para navegar rapidamente por documentos longos, encontrando ocorrências de palavras ou frases." },
+      { "text": "Imprime a página atual.", "isCorrect": false, "rationale": "Imprimir é feito com Ctrl + P." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A ferramenta 'Localizar' busca por conteúdo específico no documento." }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "Em qual guia do Word você pode adicionar uma 'Marca d'Água' (Watermark) ao documento?",
+    "options": [
+      { "text": "Guia 'Inserir'.", "isCorrect": false, "rationale": "A guia 'Inserir' é para objetos como imagens e tabelas, mas não para a Marca d'Água." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para correções e comentários." },
+      { "text": "Guia 'Design'.", "isCorrect": true, "rationale": "A Marca d'Água faz parte dos elementos de design do documento e está localizada na guia 'Design' (ou 'Layout' em algumas versões)." },
+      { "text": "Guia 'Correspondências'.", "isCorrect": false, "rationale": "A guia 'Correspondências' é para Mesclagem de Correspondência." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Marca d'Água é adicionada na guia 'Design'." }
+    ]
+  },
+  {
+    "id": 26,
+    "question": "O que a opção de 'Justificação' (Justify) de texto faz?",
+    "options": [
+      { "text": "Alinha o texto à esquerda, deixando a borda direita irregular.", "isCorrect": false, "rationale": "Isso é alinhamento à esquerda." },
+      { "text": "Distribui o texto uniformemente para que ele preencha todo o espaço entre as margens esquerda e direita.", "isCorrect": true, "rationale": "A justificação é comumente usada em jornais e livros para criar bordas limpas e uniformes em ambos os lados do texto." },
+      { "text": "Centraliza o texto na página.", "isCorrect": false, "rationale": "Isso é centralização." },
+      { "text": "Alinha o texto à direita, deixando a borda esquerda irregular.", "isCorrect": false, "rationale": "Isso é alinhamento à direita." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Justificação alinha o texto às margens esquerda e direita simultaneamente." }
+    ]
+  },
+  {
+    "id": 27,
+    "question": "O que são 'Marcadores e Numeração' (Bullets and Numbering) no Word?",
+    "options": [
+      { "text": "Ferramentas para alterar a cor da fonte.", "isCorrect": false, "rationale": "A cor da fonte é alterada no grupo 'Fonte'." },
+      { "text": "Estilos de lista usados para organizar itens de forma hierárquica ou sequencial.", "isCorrect": true, "rationale": "Marcadores (símbolos) e numeração (números/letras) são essenciais para estruturar listas e parágrafos de forma clara e organizada." },
+      { "text": "Ferramentas para inserir datas e horas automáticas.", "isCorrect": false, "rationale": "Data e hora são inseridas na guia 'Inserir'." },
+      { "text": "Tipos de fonte especiais.", "isCorrect": false, "rationale": "Não são tipos de fonte." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Marcadores e Numeração são usados para estruturar listas." }
+    ]
+  },
+  {
+    "id": 28,
+    "question": "Qual é o atalho de teclado para aplicar ou remover o formato Itálico (Italic) ao texto selecionado?",
+    "options": [
+      { "text": "Ctrl + T", "isCorrect": false, "rationale": "Ctrl + T centraliza o texto." },
+      { "text": "Ctrl + I", "isCorrect": true, "rationale": "Ctrl + I é o atalho para aplicar ou remover o formato Itálico, usado para destacar termos, títulos ou ênfase no texto." },
+      { "text": "Ctrl + N", "isCorrect": false, "rationale": "Ctrl + N aplica ou remove o Negrito." },
+      { "text": "Ctrl + U", "isCorrect": false, "rationale": "Ctrl + U aplica ou remove o Sublinhado." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + I." }
+    ]
+  },
+  {
+    "id": 29,
+    "question": "Onde se encontra a ferramenta principal para a 'Revisão Ortográfica e Gramatical' no Word?",
+    "options": [
+      { "text": "Guia 'Página Inicial'.", "isCorrect": false, "rationale": "A guia 'Página Inicial' é para formatação de texto." },
+      { "text": "Guia 'Revisão'.", "isCorrect": true, "rationale": "A guia 'Revisão' contém todas as ferramentas para verificação de texto, como ortografia, gramática, dicionário de sinônimos e contagem de palavras." },
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para configurações de página." },
+      { "text": "Guia 'Inserir'.", "isCorrect": false, "rationale": "A guia 'Inserir' é para objetos." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A revisão ortográfica está na guia 'Revisão'." }
+    ]
+  },
+  {
+    "id": 30,
+    "question": "Qual é o objetivo principal do 'Modo de Leitura' (Read Mode) no Word?",
+    "options": [
+      { "text": "Permitir a edição completa do documento sem restrições.", "isCorrect": false, "rationale": "O 'Layout de Impressão' é a visualização padrão para edição." },
+      { "text": "Exibir o documento de forma otimizada para leitura, ocultando as ferramentas de edição e as margens, simulando um livro.", "isCorrect": true, "rationale": "O Modo de Leitura remove distrações e ajusta o documento para ser visualizado com conforto em tela cheia, sem intenção de edição." },
+      { "text": "Converter o documento em um arquivo PDF.", "isCorrect": false, "rationale": "A conversão para PDF é feita pelo 'Salvar Como' ou 'Exportar'." },
+      { "text": "Imprimir a página atual.", "isCorrect": false, "rationale": "Imprimir é feito com Ctrl + P." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O Modo de Leitura otimiza a exibição para apenas ler o documento." }
+    ]
+  },
+  {
+    "id": 31,
+    "question": "Onde se insere um 'Hiperlink' (Hyperlink) no documento do Word?",
+    "options": [
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para correções." },
+      { "text": "Guia 'Design'.", "isCorrect": false, "rationale": "A guia 'Design' é para temas e cores de página." },
+      { "text": "Guia 'Inserir', grupo 'Links'.", "isCorrect": true, "rationale": "O Hiperlink (Link) é um objeto que direciona para um endereço da web ou um arquivo, e sua ferramenta está agrupada na guia 'Inserir'." },
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para margens e orientação." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O Hiperlink é inserido na guia 'Inserir'." }
+    ]
+  },
+  {
+    "id": 32,
+    "question": "Qual atalho de teclado é usado para abrir a janela de 'Impressão' (Print) do Word?",
+    "options": [
+      { "text": "Ctrl + F", "isCorrect": false, "rationale": "Ctrl + F abre a ferramenta 'Localizar'." },
+      { "text": "Ctrl + P", "isCorrect": true, "rationale": "Ctrl + P é o atalho universal para iniciar o processo de impressão na maioria dos aplicativos do Windows, incluindo o Word." },
+      { "text": "Ctrl + S", "isCorrect": false, "rationale": "Ctrl + S salva o documento." },
+      { "text": "Ctrl + O", "isCorrect": false, "rationale": "Ctrl + O abre um documento existente." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + P." }
+    ]
+  },
+  {
+    "id": 33,
+    "question": "O que a 'Tabela de Conteúdo' (Table of Contents) no Word representa?",
+    "options": [
+      { "text": "Uma lista de todas as tabelas inseridas no documento.", "isCorrect": false, "rationale": "Tabelas e figuras têm índices separados." },
+      { "text": "Uma lista hierárquica (Sumário) dos títulos e subtítulos do documento, com seus respectivos números de página.", "isCorrect": true, "rationale": "O Sumário é gerado automaticamente a partir do uso correto dos Estilos de Título e é essencial para documentos longos." },
+      { "text": "Apenas o número de palavras e caracteres.", "isCorrect": false, "rationale": "Isso é o Contador de Palavras." },
+      { "text": "O rodapé de cada página.", "isCorrect": false, "rationale": "O rodapé é um elemento separado." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Tabela de Conteúdo é o Sumário do documento." }
+    ]
+  },
+  {
+    "id": 34,
+    "question": "Para que serve a 'Régua' horizontal e vertical exibida no Word?",
+    "options": [
+      { "text": "Apenas para fins decorativos.", "isCorrect": false, "rationale": "A régua é uma ferramenta funcional." },
+      { "text": "Para ajustar rapidamente margens, recuos de parágrafo e tabulações, visualmente.", "isCorrect": true, "rationale": "A régua permite ao usuário arrastar marcadores para controlar com precisão o posicionamento do texto e as margens da página." },
+      { "text": "Para contar o número de páginas.", "isCorrect": false, "rationale": "O número de páginas é exibido na Barra de Status." },
+      { "text": "Para inserir automaticamente imagens.", "isCorrect": false, "rationale": "Imagens são inseridas na guia 'Inserir'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A régua ajusta visualmente margens, recuos e tabulações." }
+    ]
+  },
+  {
+    "id": 35,
+    "question": "Em qual guia você pode alterar a 'Cor da Página' (Page Color) do seu documento?",
+    "options": [
+      { "text": "Guia 'Página Inicial'.", "isCorrect": false, "rationale": "A guia 'Página Inicial' é para formatação de texto e parágrafo." },
+      { "text": "Guia 'Design'.", "isCorrect": true, "rationale": "A cor da página, bordas de página e marca d'água são elementos de design do documento e estão na guia 'Design'." },
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para margens e orientação." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para correções." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Cor da Página é alterada na guia 'Design'." }
+    ]
+  },
+  {
+    "id": 36,
+    "question": "Qual é o atalho de teclado usado para recortar (Cut) um item selecionado?",
+    "options": [
+      { "text": "Ctrl + V", "isCorrect": false, "rationale": "Ctrl + V cola o item." },
+      { "text": "Ctrl + C", "isCorrect": false, "rationale": "Ctrl + C copia o item." },
+      { "text": "Ctrl + X", "isCorrect": true, "rationale": "Ctrl + X é o atalho para recortar o item, removendo-o da posição atual e colocando-o na área de transferência para futura colagem." },
+      { "text": "Ctrl + Z", "isCorrect": false, "rationale": "Ctrl + Z desfaz a última ação." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + X." }
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Qual guia do Word é usada para configurar e executar a 'Mesclagem de Correspondência' (Mail Merge)?",
+    "options": [
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para configurações de página." },
+      { "text": "Guia 'Correspondências'.", "isCorrect": true, "rationale": "A guia 'Correspondências' agrupa as ferramentas para a Mesclagem de Correspondência, um recurso essencial para criar cartas, etiquetas ou envelopes em massa." },
+      { "text": "Guia 'Design'.", "isCorrect": false, "rationale": "A guia 'Design' é para temas e cores." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para correções e comentários." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Mesclagem de Correspondência está na guia 'Correspondências'." }
+    ]
+  },
+  {
+    "id": 38,
+    "question": "O que a visualização 'Estrutura de Tópicos' (Outline View) permite que o usuário faça?",
+    "options": [
+      { "text": "Visualizar o documento como um livro impresso.", "isCorrect": false, "rationale": "Essa é a visualização 'Layout de Impressão'." },
+      { "text": "Ver o documento focado em sua estrutura hierárquica (títulos), facilitando a reorganização de grandes seções.", "isCorrect": true, "rationale": "A Estrutura de Tópicos é ideal para documentos longos, permitindo ao usuário ver e manipular a estrutura do documento rapidamente pelos Estilos de Título." },
+      { "text": "Ver o código HTML subjacente ao documento.", "isCorrect": false, "rationale": "Isso seria a visualização 'Web'." },
+      { "text": "Apenas ver as margens e os limites de texto.", "isCorrect": false, "rationale": "Isso é mais próximo da visualização 'Rascunho'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Estrutura de Tópicos foca na hierarquia de títulos." }
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Qual guia contém as opções para inserir 'Gráficos' e objetos 'SmartArt'?",
+    "options": [
+      { "text": "Guia 'Página Inicial'.", "isCorrect": false, "rationale": "A guia 'Página Inicial' é para formatação de texto." },
+      { "text": "Guia 'Referências'.", "isCorrect": false, "rationale": "A guia 'Referências' lida com sumário e citações." },
+      { "text": "Guia 'Inserir'.", "isCorrect": true, "rationale": "Gráficos e SmartArt são elementos visuais que enriquecem o documento e são, portanto, encontrados no grupo 'Ilustrações' da guia 'Inserir'." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para correções." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Gráficos e SmartArt são inseridos na guia 'Inserir'." }
+    ]
+  },
+  {
+    "id": 40,
+    "question": "Qual é a função do recurso 'Auto-salvamento' (AutoSave) presente no Word (especialmente em documentos salvos na nuvem)?",
+    "options": [
+      { "text": "Executar a revisão ortográfica e gramatical.", "isCorrect": false, "rationale": "Isso é feito na guia 'Revisão'." },
+      { "text": "Salvar automaticamente o documento a cada poucos segundos, eliminando a necessidade de salvamento manual constante.", "isCorrect": true, "rationale": "O Auto-salvamento é crucial para evitar a perda de trabalho, especialmente em ambientes conectados à nuvem (como OneDrive/SharePoint)." },
+      { "text": "Criar um backup do arquivo em uma unidade externa.", "isCorrect": false, "rationale": "O backup em unidade externa requer configuração manual." },
+      { "text": "Alterar o nome do arquivo.", "isCorrect": false, "rationale": "Alterar o nome do arquivo é feito pelo 'Salvar Como' ou renomeando o arquivo." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O Auto-salvamento registra as alterações automaticamente a cada poucos segundos." }
+    ]
+  },
+  {
+    "id": 41,
+    "question": "Em qual guia do Word você pode inserir uma 'Nota de Rodapé' (Footnote) ou 'Nota de Fim' (Endnote)?",
+    "options": [
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para configurações de página." },
+      { "text": "Guia 'Inserir'.", "isCorrect": false, "rationale": "Embora pareça, as Notas de Rodapé/Fim não estão aqui, mas sim nas referências." },
+      { "text": "Guia 'Referências'.", "isCorrect": true, "rationale": "As Notas de Rodapé e as Notas de Fim são formas de referenciar informações no texto e estão localizadas na guia 'Referências', juntamente com Sumário e Citações." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para comentários e controle de alterações." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "As Notas de Rodapé/Fim são inseridas na guia 'Referências'." }
+    ]
+  },
+  {
+    "id": 42,
+    "question": "Qual atalho de teclado é usado para selecionar todo o conteúdo do documento (Selecionar Tudo)?",
+    "options": [
+      { "text": "Ctrl + S", "isCorrect": false, "rationale": "Ctrl + S salva o documento." },
+      { "text": "Ctrl + V", "isCorrect": false, "rationale": "Ctrl + V cola o conteúdo." },
+      { "text": "Ctrl + A", "isCorrect": true, "rationale": "Ctrl + A (de All) é o atalho para selecionar todo o texto, tabelas, imagens e outros objetos no documento." },
+      { "text": "Ctrl + Z", "isCorrect": false, "rationale": "Ctrl + Z desfaz a última ação." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + A." }
+    ]
+  },
+  {
+    "id": 43,
+    "question": "Em qual guia do Word você pode 'Comparar' e 'Combinar' documentos (recursos de revisão)?",
+    "options": [
+      { "text": "Guia 'Design'.", "isCorrect": false, "rationale": "A guia 'Design' é para temas e cores." },
+      { "text": "Guia 'Referências'.", "isCorrect": false, "rationale": "A guia 'Referências' é para sumário e citações." },
+      { "text": "Guia 'Revisão'.", "isCorrect": true, "rationale": "As ferramentas de 'Comparar' e 'Combinar' são essenciais para o trabalho colaborativo e residem na guia 'Revisão'." },
+      { "text": "Guia 'Exibir'.", "isCorrect": false, "rationale": "A guia 'Exibir' é para modos de visualização." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "As ferramentas 'Comparar' e 'Combinar' estão na guia 'Revisão'." }
+    ]
+  },
+  {
+    "id": 44,
+    "question": "Qual é a finalidade da função 'Inserir Texto de Arquivo' no Word?",
+    "options": [
+      { "text": "Criar um novo arquivo vazio.", "isCorrect": false, "rationale": "Novo arquivo é Ctrl + N." },
+      { "text": "Abrir o Explorador de Arquivos do Windows.", "isCorrect": false, "rationale": "Isso é feito com o atalho Windows + E." },
+      { "text": "Importar todo o texto de um arquivo existente para o ponto atual do documento, sem a necessidade de copiar e colar.", "isCorrect": true, "rationale": "Essa função, encontrada na guia 'Inserir', permite incorporar o conteúdo de outro documento diretamente no seu arquivo ativo." },
+      { "text": "Salvar o documento atual em PDF.", "isCorrect": false, "rationale": "Salvar em PDF é feito por 'Salvar Como' ou 'Exportar'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A função insere o conteúdo de outro arquivo no documento atual." }
+    ]
+  },
+  {
+    "id": 45,
+    "question": "Em qual guia se encontram as opções para mudar os modos de exibição (Layout de Impressão, Rascunho, Web Layout)?",
+    "options": [
+      { "text": "Guia 'Design'.", "isCorrect": false, "rationale": "A guia 'Design' é para temas e cores." },
+      { "text": "Guia 'Revisão'.", "isCorrect": false, "rationale": "A guia 'Revisão' é para correções." },
+      { "text": "Guia 'Exibir'.", "isCorrect": true, "rationale": "A guia 'Exibir' contém as opções para alterar a maneira como o documento é apresentado na tela, incluindo zoom, régua e modos de visualização." },
+      { "text": "Guia 'Correspondências'.", "isCorrect": false, "rationale": "A guia 'Correspondências' é para Mesclagem de Correspondência." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Os modos de exibição estão na guia 'Exibir'." }
+    ]
+  },
+  {
+    "id": 46,
+    "question": "O que é uma 'Caixa de Texto' (Text Box) no Microsoft Word?",
+    "options": [
+      { "text": "Um tipo de fonte especial.", "isCorrect": false, "rationale": "Não é um tipo de fonte." },
+      { "text": "Um contêiner para texto que pode ser movido e redimensionado livremente na página, independente do corpo principal do documento.", "isCorrect": true, "rationale": "As caixas de texto são usadas para isolar e destacar blocos de texto, posicionando-os em qualquer lugar do documento." },
+      { "text": "Apenas um atalho para a internet.", "isCorrect": false, "rationale": "Um atalho para a internet é um hiperlink." },
+      { "text": "A área reservada para o rodapé.", "isCorrect": false, "rationale": "A área de rodapé é separada." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Caixa de Texto é um contêiner de texto flutuante." }
+    ]
+  },
+  {
+    "id": 47,
+    "question": "Qual guia é usada para adicionar uma 'Borda de Página' (Page Border) ao seu documento?",
+    "options": [
+      { "text": "Guia 'Página Inicial'.", "isCorrect": false, "rationale": "A guia 'Página Inicial' é para formatação de texto." },
+      { "text": "Guia 'Layout'.", "isCorrect": false, "rationale": "A guia 'Layout' é para margens e orientação." },
+      { "text": "Guia 'Design'.", "isCorrect": true, "rationale": "A Borda de Página, a Cor da Página e a Marca d'Água são opções de design encontradas nesta guia." },
+      { "text": "Guia 'Inserir'.", "isCorrect": false, "rationale": "A guia 'Inserir' é para objetos como imagens e tabelas." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Borda de Página é adicionada na guia 'Design'." }
+    ]
+  },
+  {
+    "id": 48,
+    "question": "Qual atalho de teclado é usado para refazer (Redo) a última ação desfeita?",
+    "options": [
+      { "text": "Ctrl + Z", "isCorrect": false, "rationale": "Ctrl + Z é o atalho para desfazer." },
+      { "text": "Ctrl + R", "isCorrect": false, "rationale": "Ctrl + R geralmente alinha o texto à direita." },
+      { "text": "Ctrl + Y", "isCorrect": true, "rationale": "Ctrl + Y é o atalho para reverter a ação do 'Desfazer', ou seja, refazer a última ação." },
+      { "text": "Ctrl + T", "isCorrect": false, "rationale": "Ctrl + T centraliza o texto." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "O atalho correto é Ctrl + Y." }
+    ]
+  },
+  {
+    "id": 49,
+    "question": "Qual é a principal função da 'Revisão de Documento' no Word?",
+    "options": [
+      { "text": "Apenas imprimir e converter para PDF.", "isCorrect": false, "rationale": "Impressão e conversão são feitos pela guia 'Arquivo'." },
+      { "text": "Rastrear alterações, adicionar comentários e garantir que o documento esteja livre de erros ortográficos e gramaticais.", "isCorrect": true, "rationale": "A 'Revisão' é o conjunto de ferramentas que apoia a edição colaborativa e a qualidade final do texto." },
+      { "text": "Alterar as margens e a orientação da página.", "isCorrect": false, "rationale": "Isso é feito na guia 'Layout'." },
+      { "text": "Criar um sumário e um índice remissivo.", "isCorrect": false, "rationale": "Isso é feito na guia 'Referências'." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "A Revisão de Documento foca em correções, comentários e rastreamento de alterações." }
+    ]
+  },
+  {
+    "id": 50,
+    "question": "O que é um 'Quebra de Seção' (Section Break) no Word?",
+    "options": [
+      { "text": "Uma simples Quebra de Página (Page Break).", "isCorrect": false, "rationale": "Uma Quebra de Página força uma nova página sem alterar a formatação de página." },
+      { "text": "Um marcador que divide o documento, permitindo aplicar formatações de página diferentes (margens, orientação, colunas) a cada seção.", "isCorrect": true, "rationale": "As Quebras de Seção são essenciais para documentos complexos que exigem diferentes layouts, como ter colunas em uma página e margens diferentes na outra." },
+      { "text": "Uma ferramenta para inserir uma nova imagem.", "isCorrect": false, "rationale": "Imagens são inseridas na guia 'Inserir'." },
+      { "text": "Um atalho para o Menu Iniciar.", "isCorrect": false, "rationale": "O Menu Iniciar é do Windows." },
+      { "text": "Nenhuma das alternativas.", "isCorrect": false, "rationale": "Uma Quebra de Seção permite aplicar formatações de página diferentes a partes distintas do documento." }
+    ]
+  }
+]
