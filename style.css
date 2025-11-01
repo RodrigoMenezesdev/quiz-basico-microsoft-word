@@ -1,20 +1,22 @@
 /* --- Variáveis de Tema (Para fácil personalização) --- */
 :root {
-    --primary-color: #0056b3; /* Azul Escuro Elegante (Usado no título e nos botões de opção) */
-    --secondary-color: #6c757d; /* Cinza Suave (Usado no botão Voltar) */
-    --success-color: #28a745; /* Verde Vívido para Acerto (Usado no botão Próximo) */
-    --danger-color: #dc3545; /* Vermelho Forte para Erro (Usado no botão Sair) */
-    --highlight-bg: #e9f5ff; /* Fundo Claro para Explicações */
+    --primary-color: #1976D2; /* Azul Médio/Escuro (NOVO TEMA PRINCIPAL) */
+    --secondary-color: #6c757d; /* Cinza Suave (Mantido) */
+    --success-color: #28a745; /* Verde Vívido para Acerto (Mantido) */
+    --danger-color: #dc3545; /* Vermelho Forte para Erro (Mantido) */
+    --highlight-bg: #E3F2FD; /* Fundo Azul MUITO Claro (Para Botão de Áudio) */
+    --rationale-bg: #FFE0B2; /* 🧡 NOVO: Laranja Suave (Fundo da Explicação) */
+    --rationale-border: #FF9800; /* Laranja Forte (Borda da Explicação) */
     --quiz-bg: #ffffff;
-    --page-bg: #f4f6f9; /* Fundo geral da página */
+    --page-bg: #f4f6f9; /* Fundo geral da página (Mantido) */
     --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.08);
 
     /* Cores ajustadas para o estilo "Pill" (cápsula) dos botões de opção */
-    --option-default-bg: var(--primary-color);
+    --option-default-bg: var(--primary-color); /* Azul Escuro como fundo padrão */
     --option-default-text: white; 
 }
 
-/* --- Estilos Globais e Reset --- */
+/* --- Estilos Globais e Reset (Mantido) --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--page-bg);
@@ -37,9 +39,9 @@ body {
     margin-top: 20px;
 }
 
-/* --- Títulos --- */
+/* --- Títulos (Atualizado) --- */
 h1 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Agora é Azul Escuro */
     text-align: center;
     margin-bottom: 5px;
     font-size: 2em;
@@ -56,7 +58,7 @@ h1 {
     padding-bottom: 15px;
 }
 
-/* --- Blocos de Pergunta --- */
+/* --- Blocos de Pergunta (Mantido) --- */
 
 .question-block {
     margin-bottom: 30px;
@@ -64,11 +66,27 @@ h1 {
     border-bottom: 1px dashed #ddd;
 }
 
+.question-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 15px; 
+}
+
 .question-text {
     font-size: 1.3em;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin: 0;
     color: #1a1a1a;
+    flex-grow: 1; 
+    padding-right: 15px;
+}
+
+.option-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    width: 100%; 
 }
 
 .answer-options {
@@ -77,51 +95,73 @@ h1 {
     gap: 10px;
 }
 
-/* Botões de Opção (Estilo CÁPSULA AZUL) */
-.answer-options button {
+/* Estilo Base para todos os botões de áudio (Atualizado para o novo Azul) */
+.audio-button {
+    background-color: var(--highlight-bg); /* Fundo Azul MUITO Claro (E3F2FD) */
+    color: var(--primary-color); /* Cor do ícone Azul Escuro (1976D2) */
+    border: 1px solid var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 8px; 
+    font-size: 1.2em;
+    line-height: 1; 
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    flex-shrink: 0; 
+}
+
+.audio-button:hover {
+    background-color: var(--primary-color); /* Fundo Azul Escuro no hover */
+    color: white;
+}
+
+/* Botão de Opção de Resposta (Selecionar) (Atualizado para o novo Azul) */
+.option-select-button {
+    /* Estilo CÁPSULA AZUL (usa --option-default-bg que é PRIMARY) */
+    flex-grow: 1; 
     width: 100%;
     text-align: left;
     padding: 14px 20px;
-    
     border: none; 
-    border-radius: 999px; /* Efeito cápsula */
-    background-color: var(--option-default-bg); /* Fundo Azul Sólido */
-    color: var(--option-default-text); /* Texto Branco */
-    
+    border-radius: 999px; 
+    background-color: var(--option-default-bg); 
+    color: var(--option-default-text); 
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.2s, opacity 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.answer-options button:hover:not([disabled]) {
-    background-color: #004085; /* Azul Escuro no hover */
+.option-select-button:hover:not([disabled]) {
+    background-color: #1565C0; /* Azul um pouco mais escuro no hover */
 }
 
-/* Botão desabilitado */
-.answer-options button:disabled {
+/* Botão desabilitado (Mantido) */
+.option-select-button:disabled {
     cursor: default;
     opacity: 1; 
 }
 
-/* --- Feedback Visual --- */
+.option-audio:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
 
-/* Opção Correta (Verde) */
-.answer-options button.correct {
+
+/* --- Feedback Visual (Mantido) --- */
+
+.option-select-button.correct {
     background-color: var(--success-color);
     color: white;
     border: none; 
     font-weight: 600;
 }
 
-/* Opção Incorreta (Vermelho) */
-.answer-options button.incorrect {
+.option-select-button.incorrect {
     background-color: var(--danger-color);
     color: white;
     border: none; 
 }
 
-/* Feedback de Texto (ícone ao lado) */
 .feedback-correct, .feedback-incorrect {
     font-weight: 700;
     margin-left: 10px;
@@ -137,22 +177,24 @@ h1 {
     color: var(--danger-color);
 }
 
-/* Explicação/Rationale */
+/* Explicação/Rationale (MODIFICADO PARA FUNDO LARANJA E TEXTO EM NEGRITO) */
 .rationale-text {
     margin-top: 15px;
     padding: 15px;
-    border-left: 5px solid var(--primary-color);
-    background-color: var(--highlight-bg);
+    /* Borda Laranja Forte */
+    border-left: 5px solid var(--rationale-border); 
+    /* Fundo Laranja Suave */
+    background-color: var(--rationale-bg); 
     font-style: italic;
-    color: #004085;
+    color: #333; 
     border-radius: 4px;
     font-size: 0.95em;
+    font-weight: **bold**; 
 }
 
-/* --- Área de Navegação (Voltar e Próximo Lado a Lado) --- */
+/* --- Área de Navegação (Mantido) --- */
 
 .navigation-area {
-    /* CHAVE: Alinha os botões lado a lado com espaço entre eles */
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -162,7 +204,6 @@ h1 {
     gap: 15px; 
 }
 
-/* Estilo Base para todos os botões de navegação */
 .nav-button {
     padding: 12px 25px;
     border: none;
@@ -172,11 +213,10 @@ h1 {
     cursor: pointer;
     transition: background-color 0.2s, opacity 0.2s, box-shadow 0.2s;
     text-transform: uppercase;
-    min-width: 120px; /* Garante tamanho mínimo para consistência */
+    min-width: 120px; 
     text-align: center;
 }
 
-/* Estilos específicos dos botões */
 .back-button {
     background-color: var(--secondary-color);
     color: white;
@@ -194,11 +234,11 @@ h1 {
 }
 
 .finish-button {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Botão Finalizar em Azul Escuro */
     color: white;
 }
 .finish-button:hover:not([disabled]) {
-    background-color: #004085;
+    background-color: #1565C0; /* Hover Azul Escuro */
 }
 
 .nav-button:disabled {
@@ -207,7 +247,7 @@ h1 {
     box-shadow: none;
 }
 
-/* --- Área de Resultados (Bloco e Final) --- */
+/* --- Área de Resultados (Mantido) --- */
 .results-area {
     margin: 30px 0;
     padding: 25px;
@@ -231,9 +271,9 @@ h1 {
 }
 
 .motivation-message {
+    color: var(--primary-color); /* Agora é Azul Escuro */
     margin-top: 20px;
     font-style: italic;
-    color: var(--primary-color);
     font-weight: 500;
 }
 
@@ -248,7 +288,7 @@ h1 {
     font-weight: 600;
 }
 
-/* Estilos Finais (Pós-Quiz) */
+/* Estilos Finais (Pós-Quiz) (Mantido) */
 .final-buttons {
     display: flex;
     justify-content: center;
@@ -256,7 +296,6 @@ h1 {
     margin-top: 30px;
 }
 
-/* Cor do botão SAIR (vermelho) */
 .exit-button {
     background-color: var(--danger-color);
     color: white;
@@ -273,7 +312,7 @@ h1 {
     background-color: var(--success-color);
 }
 
-/* Responsividade (Para telas menores) */
+/* Responsividade (Mantido) */
 @media (max-width: 600px) {
     .quiz-container {
         padding: 20px;
@@ -283,17 +322,34 @@ h1 {
         font-size: 1.6em;
     }
 
+    .question-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
     .question-text {
         font-size: 1.1em;
+        margin-bottom: 10px; 
+        padding-right: 0;
+    }
+    
+    .audio-button {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .option-flex {
+        flex-direction: row;
+        gap: 8px; 
     }
 
-    .answer-options button {
+    .option-select-button {
         padding: 12px 15px;
         font-size: 0.95em;
     }
 
     .navigation-area {
-        flex-direction: row; /* Mantém lado a lado, mas reduz o espaço */
+        flex-direction: row; 
         justify-content: space-around;
         gap: 10px;
     }
@@ -303,4 +359,5 @@ h1 {
         padding: 10px 15px;
         font-size: 0.9em;
     }
-}
+    }
+    
