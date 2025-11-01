@@ -517,4 +517,23 @@ function exitQuiz() {
         quizContent.innerHTML = `
             <div class="exit-screen">
                 <h2>Saída Antecipada</h2>
-                <p>Você respondeu **${totalAnswered}** de ${totalQuestions} perguntas.
+                <p>Você respondeu **${totalAnswered}** de ${totalQuestions} perguntas.</p>
+                <p class="score-summary" style="color: var(--success-color);">Acertos: <strong>${totalHits}</strong></p>
+                <p class="score-summary" style="color: var(--danger-color);">Erros: <strong>${totalErrors}</strong></p>
+                <p class="score-summary">Aproveitamento: **${totalPercentage}%**</p>
+                <p>Obrigado por participar. Clique abaixo para tentar novamente.</p>
+                
+                <div class="final-buttons">
+                    <button class="nav-button try-again" onclick="startQuiz()">Tentar Novamente</button>
+                </div>
+            </div>
+        `;
+        navigationArea.style.display = 'none'; 
+        resultsArea.style.display = 'none';
+        quizSubtitle.textContent = 'Quiz Cancelado';
+    }
+}
+
+
+// Inicia o quiz
+document.addEventListener('DOMContentLoaded', loadQuestions);
