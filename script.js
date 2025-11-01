@@ -1,4 +1,5 @@
-const QUESTIONS_PER_BLOCK = 10;
+// CORRIGIDO: Const para const (padrão JS)
+const QUESTIONS_PER_BLOCK = 10; 
 let originalQuestions = [];
 let shuffledQuestions = [];
 let currentBlock = 0;
@@ -21,6 +22,81 @@ const motivationMessages = [
     "Fim de jogo! Você chegou ao final do quiz. Sua persistência e dedicação são a chave para o domínio do Pacote Office. Orgulhe-se do seu esforço!"
 ];
 
+// =======================================================
+// NOVAS FUNÇÕES: LEITURA DE TEXTO (TEXT-TO-SPEECH - TTS)
+// LÓGICA ROBUSTA PARA CARREGAMENTO DE VOZES (MAIOR COMPATIBILIDADE)
+// =======================================================
+
+let vozPortugues = null;
+
+// Lógica de carregamento robusto
+function carregarVozes() {
+    if (vozPortugues) return; // Já carregou
+
+    const vozes = speechSynthesis.getVoices();
+    
+    // Tenta encontrar uma voz em Português do Brasil.
+    const ptVoice = vozes.find(voice => 
+        voice.lang === 'pt-BR' || 
+        voice.lang === 'pt_BR' || 
+        (voice.lang.startsWith('pt-') && !voice.lang.includes('PT')) // Captura 'pt-pt' mas prefere 'pt-br'
+    );
+    
+    if (ptVoice) {
+        vozPortugues = ptVoice;
+    } else if (vozes.length === 0) {
+        // CORREÇÃO: Se a lista de vozes está vazia, o navegador ainda não as carregou.
+        // Tenta novamente em 200ms.
+        console.log("Vozes do sistema não carregadas. Tentando novamente...");
+        setTimeout(carregarVozes, 200);
+    } else {
+        console.warn("Voz em Português (pt-BR) não foi encontrada. O navegador usará uma voz padrão, que pode não ser em Português.");
+    }
+}
+
+// O evento 'onvoiceschanged' é a forma ideal, mas pode falhar.
+if ('speechSynthesis' in window) {
+    speechSynthesis.onvoiceschanged = carregarVozes;
+    // Tenta carregar imediatamente no início, caso o evento já tenha disparado.
+    carregarVozes(); 
+}
+
+
+function pararLeitura() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.cancel();
+    }
+}
+
+function lerTexto(textoParaLer) {
+    pararLeitura();
+
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(textoParaLer);
+        
+        // 1. Tenta usar a voz específica que encontramos (vozPortugues agora é mais confiável)
+        if (vozPortugues) {
+            utterance.voice = vozPortugues;
+        } else {
+            // 2. Se falhar, pelo menos define a língua
+            utterance.lang = 'pt-BR'; 
+        }
+
+        // 3. Adiciona um pequeno atraso (Timeout de 100ms)
+        setTimeout(() => {
+            speechSynthesis.speak(utterance);
+        }, 100); 
+
+    } else {
+        console.warn('Web Speech API não suportada neste navegador.');
+    }
+}
+
+// =======================================================
+// FIM DAS FUNÇÕES TTS
+// =======================================================
+
+
 // --- FUNÇÃO DE ALEATORIEDADE ---
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -31,6 +107,7 @@ function shuffleArray(array) {
 
 // 1. Carregar as perguntas
 async function loadQuestions() {
+    pararLeitura(); 
     quizSubtitle.textContent = "Carregando Quiz...";
     quizContent.innerHTML = "<p>Tentando carregar as perguntas...</p>";
     
@@ -72,6 +149,7 @@ async function loadQuestions() {
 
 // 2. Iniciar o Quiz
 function startQuiz() {
+    pararLeitura(); 
     shuffledQuestions = [...originalQuestions]; 
     shuffleArray(shuffledQuestions);
 
@@ -86,6 +164,7 @@ function startQuiz() {
 
 // 3. Renderizar o bloco atual
 function renderBlock() {
+    pararLeitura(); 
     const startIdx = currentBlock * QUESTIONS_PER_BLOCK;
     const endIdx = startIdx + QUESTIONS_PER_BLOCK;
     const blockQuestions = shuffledQuestions.slice(startIdx, endIdx);
@@ -107,7 +186,7 @@ function renderBlock() {
     updateNavigationButtons();
 }
 
-// 4. Criar HTML da pergunta
+// 4. Criar HTML da pergunta (MODIFICADA para incluir botão de áudio nas opções)
 function createQuestionHtml(question, globalIndex) {
     const qBlock = document.createElement('div');
     qBlock.className = 'question-block';
@@ -115,10 +194,26 @@ function createQuestionHtml(question, globalIndex) {
 
     const formattedNumber = String(globalIndex).padStart(2, '0');
 
+    // Container para o número, texto da pergunta E o botão de áudio da PERGUNTA
+    const qHeader = document.createElement('div');
+    qHeader.className = 'question-header';
+    
     const qText = document.createElement('p');
     qText.className = 'question-text';
     qText.textContent = `${formattedNumber}. ${question.question}`;
-    qBlock.appendChild(qText);
+    
+    // Botão de áudio da PERGUNTA
+    const audioButtonQuestion = document.createElement('button');
+    audioButtonQuestion.textContent = '🔊';
+    audioButtonQuestion.className = 'audio-button question-audio';
+    audioButtonQuestion.ariaLabel = `Ouvir pergunta ${formattedNumber}`;
+
+    // Evento de clique para ler a PERGUNTA
+    audioButtonQuestion.onclick = () => lerTexto(question.question); 
+    
+    qHeader.appendChild(qText);
+    qHeader.appendChild(audioButtonQuestion);
+    qBlock.appendChild(qHeader); 
 
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'answer-options';
@@ -129,14 +224,38 @@ function createQuestionHtml(question, globalIndex) {
         const optionWrapper = document.createElement('div');
         optionWrapper.className = 'option-wrapper';
 
+        // Container para o botão de resposta e o botão de áudio da opção
+        const optionFlex = document.createElement('div');
+        optionFlex.className = 'option-flex';
+
+        // Botão de Opção de Resposta
         const optionButton = document.createElement('button');
         optionButton.textContent = `${letters[index]}) ${option.text}`;
         optionButton.dataset.correct = option.isCorrect;
         optionButton.dataset.index = index;
         optionButton.dataset.rationale = option.rationale;
         optionButton.onclick = (e) => handleAnswer(e.target, question.id, index);
+        optionButton.className = 'option-select-button'; // Nova classe para estilizar
 
-        optionWrapper.appendChild(optionButton);
+        // NOVO: Botão de áudio da OPÇÃO
+        const audioButtonOption = document.createElement('button');
+        audioButtonOption.textContent = '🔊';
+        audioButtonOption.className = 'audio-button option-audio';
+        audioButtonOption.ariaLabel = `Ouvir opção ${letters[index]}`;
+        
+        // Evento de clique para ler a OPÇÃO
+        // O texto a ser lido é a letra e o texto da opção
+        audioButtonOption.onclick = (e) => {
+            e.stopPropagation(); // Evita que o clique no audioButtonOption dispare o handleAnswer
+            lerTexto(`Opção ${letters[index]}, ${option.text}`);
+        };
+
+        // Adiciona os botões ao container flex
+        optionFlex.appendChild(optionButton);
+        optionFlex.appendChild(audioButtonOption);
+        
+        // Adiciona o container flex ao wrapper da opção
+        optionWrapper.appendChild(optionFlex);
         optionsDiv.appendChild(optionWrapper);
     });
 
@@ -144,13 +263,13 @@ function createQuestionHtml(question, globalIndex) {
 
     if (userAnswers[question.id] !== undefined) {
         const answeredIndex = userAnswers[question.id].selectedIndex;
-        const answeredButton = qBlock.querySelector(`button[data-index="${answeredIndex}"]`);
+        const answeredButton = qBlock.querySelector(`button.option-select-button[data-index="${answeredIndex}"]`);
         
         if (answeredButton) {
             handleAnswer(answeredButton, question.id, answeredIndex, false);
         }
 
-        qBlock.querySelectorAll('button').forEach(btn => btn.disabled = true);
+        qBlock.querySelectorAll('button.option-select-button, button.option-audio').forEach(btn => btn.disabled = true);
     }
 
     return qBlock;
@@ -158,6 +277,7 @@ function createQuestionHtml(question, globalIndex) {
 
 // 5. Lidar com a resposta
 function handleAnswer(selectedButton, questionId, selectedIndex, shouldUpdateScore = true) {
+    pararLeitura(); // Parar a leitura quando uma resposta for dada
     const qBlock = selectedButton.closest('.question-block');
     const question = originalQuestions.find(q => q.id === questionId);
     if (!question) return;
@@ -173,7 +293,9 @@ function handleAnswer(selectedButton, questionId, selectedIndex, shouldUpdateSco
     
     showFeedback(qBlock, isCorrect, selectedIndex);
 
-    qBlock.querySelectorAll('button').forEach(btn => btn.disabled = true);
+    // Desabilita todos os botões de opção e áudio das opções
+    qBlock.querySelectorAll('button.option-select-button, button.option-audio').forEach(btn => btn.disabled = true);
+    qBlock.querySelector('button.question-audio').disabled = true; // Desabilita o áudio da pergunta também
     
     validationMessage.style.display = 'none'; 
 
@@ -187,7 +309,7 @@ function handleAnswer(selectedButton, questionId, selectedIndex, shouldUpdateSco
 
 // 6. Mostrar feedback visual e explicação
 function showFeedback(qBlock, selectedIsCorrect, selectedIndex) {
-    const buttons = qBlock.querySelectorAll('button');
+    const buttons = qBlock.querySelectorAll('button.option-select-button');
     let correctRationale = '';
 
     if (qBlock.querySelector('.rationale-text')) { qBlock.querySelector('.rationale-text').remove(); }
@@ -206,15 +328,16 @@ function showFeedback(qBlock, selectedIsCorrect, selectedIndex) {
 
         const isCurrentlySelected = parseInt(btn.dataset.index) === selectedIndex;
 
-        if (!selectedIsCorrect && isCurrentlySelected) {
-            btn.classList.add('incorrect');
-        }
-
         if (isCurrentlySelected) {
+            if (!selectedIsCorrect) {
+                 btn.classList.add('incorrect');
+            }
+           
             const feedbackSpan = document.createElement('span');
             feedbackSpan.className = selectedIsCorrect ? 'feedback-correct' : 'feedback-incorrect';
             feedbackSpan.textContent = selectedIsCorrect ? ' ✅ Correto' : ' ❌ Erro';
-            btn.insertAdjacentElement('afterend', feedbackSpan);
+            // Insere o feedback após o botão de seleção (que está dentro de optionFlex)
+            btn.closest('.option-flex').insertAdjacentElement('afterend', feedbackSpan);
         }
     });
 
@@ -336,8 +459,9 @@ function updateNavigationButtons() {
     navigationArea.innerHTML = `${backButtonHtml}${primaryButtonHtml}`;
 }
 
-// Funções de Navegação
+// Funções de Navegação (MODIFICADAS para incluir parada de áudio)
 function navigateBack() {
+    pararLeitura(); 
     if (currentBlock > 0) {
         currentBlock--;
         renderBlock();
@@ -345,6 +469,7 @@ function navigateBack() {
 }
 
 function navigateNext() {
+    pararLeitura(); 
     // Verifica o estado de conclusão para garantir que todas as perguntas foram respondidas
     const isComplete = checkBlockCompletionState();
     
@@ -360,6 +485,7 @@ function navigateNext() {
 }
 
 function finishQuiz() {
+    pararLeitura(); 
     const totalQuestions = shuffledQuestions.length;
     quizContent.innerHTML = `
         <h2>Resultado Final do Quiz</h2>
@@ -380,6 +506,7 @@ function finishQuiz() {
 }
 
 function exitQuiz() {
+    pararLeitura(); 
     const confirmExit = confirm("Tem certeza que deseja sair do quiz? Seu progresso será perdido, mas o placar atual será exibido.");
 
     if (confirmExit) {
@@ -390,23 +517,4 @@ function exitQuiz() {
         quizContent.innerHTML = `
             <div class="exit-screen">
                 <h2>Saída Antecipada</h2>
-                <p>Você respondeu **${totalAnswered}** de ${totalQuestions} perguntas.</p>
-                <p class="score-summary" style="color: var(--success-color);">Acertos: <strong>${totalHits}</strong></p>
-                <p class="score-summary" style="color: var(--danger-color);">Erros: <strong>${totalErrors}</strong></p>
-                <p class="score-summary">Aproveitamento: **${totalPercentage}%**</p>
-                <p>Obrigado por participar. Clique abaixo para tentar novamente.</p>
-                
-                <div class="final-buttons">
-                    <button class="nav-button try-again" onclick="startQuiz()">Tentar Novamente</button>
-                </div>
-            </div>
-        `;
-        navigationArea.style.display = 'none'; 
-        resultsArea.style.display = 'none';
-        quizSubtitle.textContent = 'Quiz Cancelado';
-    }
-}
-
-
-// Inicia o quiz
-document.addEventListener('DOMContentLoaded', loadQuestions);
+                <p>Você respondeu **${totalAnswered}** de ${totalQuestions} perguntas.
